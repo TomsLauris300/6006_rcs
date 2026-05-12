@@ -1,0 +1,16 @@
+[project]
+name = "orchestrator-hub"
+version = "0.1.0"
+description = "File-queue-based orchestrator that spawns specialized Claude Code agents."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+orchestrator = "orchestrator.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
